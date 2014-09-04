@@ -1,7 +1,5 @@
 /**
  * Questa classe rappresenta il proxy vero e proprio, è la classe che media l'accesso diretto a un oggetto di tipo GenericUser
- * Si noti che questa classe, crea un istanza della classe GenericUser solo al momento in cui diventa indispensabile,
- * ossia solo quando ne vengono richieste le informazioni complete.
  */
 package decorator;
 
@@ -9,20 +7,60 @@ package decorator;
  * @author Alessandro
  *
  */
-public class ProxyUser extends User {
+public class ProxyUser extends AbstractUser {
 	
-	protected GenericUser user; //Riferimento a un istanza della classe GenericUser
+	private User user; //Riferimento a un istanza della classe User
 	
-	public ProxyUser(String nomeUtente, String pwd, String ruolo) {
-		super(nomeUtente, pwd, ruolo);
-		System.out.println( "(creating a proxy cache)" );
-		// TODO Auto-generated constructor stub
+	public ProxyUser() {
+		user = new User();
 	}
 	
-	public GenericUser getGenericUser(){
-		if( user == null )
-			user = new Customer(nomeUtente, pwd, ruolo);
-		return user;
+	public ProxyUser(User user) {
+		this.user = user;
 	}
+	
+	@Override
+	public String getUsername() {
+		return user.getUsername();
+	}
+	
+	@Override
+	public String getPwd() {
+		return user.getPwd();
+	}
+	
+	@Override
+	public String getRuolo() {
+		return user.getRuolo();
+	}
+	
+	@Override
+	public void setUsername(String username) {
+		// TODO Auto-generated method stub
+		if (this.user == null)
+			System.out.println("Guarda che il riferimento al real object è NULL !!!!!");
+		else this.user.setUsername(username);
+	}
+	
+	@Override
+	public void setPwd(String pwd) {
+		// TODO Auto-generated method stub
+		this.user.setPwd(pwd);
+		
+	}
+	
+	@Override
+	public void setRuolo(String ruolo) {
+		// TODO Auto-generated method stub
+		this.user.setRuolo(ruolo);
+	}
+	
+	public void login() {
+		System.out.println("Eseguo il metodo Login del ProxyUser");
+		/*
+		 *** TO-DO ***
+		 */
+	}
+	
 	
 }

@@ -1,47 +1,65 @@
 /**
- * Subject: Rappresenta l'interfaccia comune RealSubject(GenericUser) e a Proxy(ProxyUser)
- * Utilizziamo una classe astratta al posto di un interfaccia in quanto deve implementare anche l'intefaccia AbstractUser.
+ * Oggetto ConcreteComponent, implementa l'interfaccia di User e rappresenta la generalizzazione per i diversi tipi di utenti
+ * Customer e TA.
+ * 
+ * TO-DO: Gerarchia degli utenti Customer e TA a partire da questa classe.
+ *  
  */
 package decorator;
 
 /**
- * @author utente
+ * @author Alessandro
  *
  */
-public abstract class User implements AbstractUser {
+public class User extends AbstractUser{
 	
-	public String nomeUtente;
-	public String pwd;
-	public String ruolo;
+	String username;
+	String pwd;
+	String ruolo;
 	
-	public User (String nomeUtente, String pwd, String ruolo) {
-		this.setNomeUtente(nomeUtente);
-		this.setPwd(pwd);
-		this.setRuolo(ruolo);
-	}
-
-	public String getNomeUtente() {
-		return nomeUtente;
-	}
-
-	public void setNomeUtente(String nomeUtente) {
-		this.nomeUtente = nomeUtente;
-	}
-
-	public String getPwd() {
-		return pwd;
-	}
-
-	public void setPwd(String pwd) {
+	public User(String username, String pwd, String ruolo) {
+		this.username = username;
 		this.pwd = pwd;
-	}
-
-	public String getRuolo() {
-		return ruolo;
-	}
-
-	public void setRuolo(String ruolo) {
 		this.ruolo = ruolo;
 	}
+	
+	public User() {
+		
+	}
 
+	@Override
+	public String getUsername() {
+		return username;
+	}
+	
+	@Override
+	public String getPwd() {
+		// TODO Auto-generated method stub
+		return pwd;
+	}
+	
+	@Override
+	public String getRuolo() {
+		// TODO Auto-generated method stub
+		return ruolo;
+	}
+	
+	@Override
+	public void setUsername(String username) {
+		// TODO Auto-generated method stub
+		this.username = username;
+	}
+	
+	@Override
+	public void setPwd(String pwd) {
+		// TODO Auto-generated method stub
+		this.pwd = pwd;
+	}
+	
+	@Override
+	public void setRuolo(String ruolo) {
+		// TODO Auto-generated method stub
+		this.ruolo = ruolo;
+	}
+	
 }

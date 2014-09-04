@@ -8,7 +8,7 @@ package decorator;
  * @author Alessandro
  *
  */
-public abstract class DecoratorUser implements AbstractUser {
+public abstract class DecoratorUser extends AbstractUserComponent {
 	
 	protected AbstractUser component; //Riferimento al component
 
@@ -20,8 +20,8 @@ public abstract class DecoratorUser implements AbstractUser {
 		return component.getRuolo();
 	}
 	
-	public String getNomeUtente() {
-		return component.getNomeUtente();
+	public String getUsername() {
+		return component.getUsername();
 	}
 	
 	public String getPwd() {

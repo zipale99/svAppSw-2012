@@ -32,17 +32,27 @@ public class DecoratorTest {
 		String pwd = "qwerty";
 		String ruolo = "Customer";
 		
-		ProxyUser utente1 = new ProxyUser(nome, pwd, ruolo); //Creato nuovo utente
+		
+		
+		ProxyUser utente1 = new ProxyUser(); //Creato nuovo utente
+		
+		utente1.setUsername(nome);
+		utente1.setPwd(pwd);
+		utente1.setRuolo(ruolo);
 		
 		System.out.println("Richiedo le informazioni sull'utente... \n");
 		
-		String nomeUtente = utente1.getGenericUser().getNomeUtente(); 
-		String password = utente1.getGenericUser().getPwd(); 
-		String role = utente1.getGenericUser().getRuolo(); 
+		String nomeUtente = utente1.getUsername(); 
+		String password = utente1.getPwd(); 
+		String role = utente1.getRuolo(); 
 		
 		System.out.println("Ciao a tutti, sono l'utente: " + nomeUtente +"\nla mia password è: "+password+"\ne il mio ruolo è "+role);
 		
-		System.out.println("Utilizzo il decorator per aggiungere la funzionalità di Creator ad Alessandro");
+		System.out.println("Effettuo il login");
+		
+		utente1.login();
+		
+		//System.out.println("Utilizzo il decorator per aggiungere la funzionalità di Creator ad Alessandro");
 		
 		//TO-DO...
 	}
