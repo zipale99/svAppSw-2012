@@ -79,13 +79,22 @@ public class DecoratorTest {
 		System.out.println("il mio nome è: " + nomeUtente +"\nla mia password è: "+password+"\nil mio ruolo è "+role);
 		
 		System.out.println("\nDecoro l'utente Reale con la funzionalità di creator");
-		
+		i
 		utenteReale = new CreatorDecorator(utenteReale);
 		
 		//Recupero nuovamente il ruolo dell'utente
 		role = utenteReale.getRuolo();
 		System.out.println("\nQual'è il tuo ruolo adesso?");
 		System.out.println("\nil mio ruolo è "+role);
+		
+		/*
+		 * TO-DO_1: Implemetare il Multiton e il metodo create() per ciascun concretDecorator
+		 * per fare in modo che ciascun oggetto possa essere decorato al più una volta e con 
+		 * il tipo di decorator appropriato: Customer->CreatorCustomerDecorator
+		 * 									 TA->CreatorTaDecorator 
+		 * 
+		 * TO-DO_2: PATTERN GRASP CONTROLLER (managementController, searchController)
+		 */
 	}
 
 }
