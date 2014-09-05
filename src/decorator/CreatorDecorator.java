@@ -9,12 +9,12 @@ package decorator;
  */
 public class CreatorDecorator extends DecoratorUser {
 	
-	public CreatorDecorator(AbstractUser component) { //Decoro con la funzionalità di creator
+	public CreatorDecorator(AbstractUserComponent component) { //Decoro con la funzionalità di creator
 		super(component);
 	}
 	
 	public String getRuolo() {
 		//super.getRuolo(); per conoscere il ruolo di prima
-		return "Creator";
+		return "Creator" + super.getRuolo();
 	}
 }

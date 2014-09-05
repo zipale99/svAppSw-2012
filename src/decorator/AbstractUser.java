@@ -8,7 +8,7 @@ package decorator;
  * @author Alessandro
  *
  */
-public abstract class AbstractUser {
+public abstract class AbstractUser extends AbstractUserComponent {
 
 	public abstract String getPwd();
 	public abstract String getRuolo();

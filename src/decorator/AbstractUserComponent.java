@@ -14,6 +14,4 @@ public abstract class AbstractUserComponent {
 	public abstract String getPwd();
 	public abstract String getRuolo();
 	
-	
-	
 }

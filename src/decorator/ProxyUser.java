@@ -1,5 +1,13 @@
 /**
- * Questa classe rappresenta il proxy vero e proprio, è la classe che media l'accesso diretto a un oggetto di tipo GenericUser
+ * Questa classe rappresenta il proxy vero e proprio, è la classe che media l'accesso diretto a un oggetto di tipo User.
+ * 
+ * In sostanza il Proxy viene impiegato solamente allo scopo di fare da surrogato per User al fine di controllarne l'accesso,
+ * consente di aggiugnere un ulteriore livello di indirezione. 
+ * 
+ * Senza l'utilizzo del proxy, il metodo login/sign-up avrebbe dovuto appartenere alla classe User, utilizzando il Proxy invece,
+ * i metodi login/sign-up avvengono all'interno di questa classe e in caso di successo, viene restituito l'oggetto reale (User).
+ * 
+ * TO-DO: Effettuare tutti i controlli necessari sull'istanza User che deve essere sempre divero da NULL.
  */
 package decorator;
 
@@ -11,8 +19,13 @@ public class ProxyUser extends AbstractUser {
 	
 	private User user; //Riferimento a un istanza della classe User
 	
+	/*
+	 * Costruttore implementato solo per fare delle prove, nel caso reale, l'oggetto User sarà creato
+	 * all'interno del metodo login.
+	 */
 	public ProxyUser() {
 		user = new User();
+		System.out.println("( ProxyUser creato )");
 	}
 	
 	public ProxyUser(User user) {
@@ -56,9 +69,10 @@ public class ProxyUser extends AbstractUser {
 	}
 	
 	public void login() {
-		System.out.println("Eseguo il metodo Login del ProxyUser");
+		System.out.println("( Metodo Login di ProxyUser )");
 		/*
 		 *** TO-DO ***
+		 *Istanziare il real object solo in caso di autenticazione corretta e restituirlo.
 		 */
 	}
 	

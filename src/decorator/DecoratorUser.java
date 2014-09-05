@@ -10,9 +10,9 @@ package decorator;
  */
 public abstract class DecoratorUser extends AbstractUserComponent {
 	
-	protected AbstractUser component; //Riferimento al component
+	protected AbstractUserComponent component; //Riferimento al component
 
-	public DecoratorUser(AbstractUser component) { //Assegno la decorazione al component
+	public DecoratorUser(AbstractUserComponent component) { //Assegno la decorazione al component
 		this.component = component; 
 	}
 	
