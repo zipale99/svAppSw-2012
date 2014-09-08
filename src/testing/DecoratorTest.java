@@ -69,6 +69,24 @@ public class DecoratorTest {
 		//AbstractUserComponent utenteReale = new User();
 		AbstractUserComponent utenteReale = utenteProxy;
 		
+		//Decidere se fondere l'interfaccia AbstractUser con AbstractUserComponent
+		
+		/*
+		 * Creo un nuovo utente generico a partire dall'interfaccia AUC 
+		 * AbstractUserComponent uR = new User("","","");
+		 * 
+		 * Creo un nuovo utente Customer a partire dall'interfaccia AUC
+		 * AbstractUserComponent uR = new Customer("","","");
+		 * 
+		 * Creo un nuovo utente TA a partire dall'interfaccia AUC
+		 * AbstractUserComponent uR = new TA("","","");
+		 * 
+		 * A partire da un utente Customer o un utente TA, decoro con la funzionalità di creator
+		 * uR = new CreatorDecoratorCustomer(uR) 
+		 * 
+		 */
+		
+		
 		System.out.println("Adesso sono un utente Reale!\n");
 		System.out.println("Restituisco le informazioni sull'utente... \n");
 		
@@ -79,7 +97,6 @@ public class DecoratorTest {
 		System.out.println("il mio nome è: " + nomeUtente +"\nla mia password è: "+password+"\nil mio ruolo è "+role);
 		
 		System.out.println("\nDecoro l'utente Reale con la funzionalità di creator");
-		i
 		utenteReale = new CreatorDecorator(utenteReale);
 		
 		//Recupero nuovamente il ruolo dell'utente

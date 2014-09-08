@@ -72,7 +72,8 @@ public class ProxyUser extends AbstractUser {
 		System.out.println("( Metodo Login di ProxyUser )");
 		/*
 		 *** TO-DO ***
-		 *Istanziare il real object solo in caso di autenticazione corretta e restituirlo.
+		 *Istanziare il real object solo in caso di autenticazione corretta e restituirlo con i parametri
+		 *impostati(parametro user passato come parametro)
 		 */
 	}
 	
