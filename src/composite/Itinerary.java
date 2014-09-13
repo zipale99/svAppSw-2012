@@ -3,11 +3,14 @@
  */
 package composite;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author utente
  *
  */
-public class Itinerary extends StayTemplateComposite {
+public class Itinerary {
 
 	int id;
 	String stato;
@@ -18,10 +21,10 @@ public class Itinerary extends StayTemplateComposite {
 	String categoria;
 	String nome;
 	String desc;
+	List<StayTemplate> listaTappe;
 	
 	
 	public Itinerary(int id, String stato, String type, String startLoc, String endLoc, String durata, String categoria, String nome, String desc) {
-		super();
 		this.id = id;
 		this.stato = stato;
 		this.type = type;
@@ -31,6 +34,11 @@ public class Itinerary extends StayTemplateComposite {
 		this.categoria = categoria;
 		this.nome = nome;
 		this.desc = desc;
+		this.listaTappe = new ArrayList<StayTemplate>();
+	}
+	
+	public void add (StayTemplate st) {
+		listaTappe.add(st);
 	}
 
 

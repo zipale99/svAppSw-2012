@@ -2,8 +2,9 @@ package composite;
 
 public class Stay extends StayTemplate {
 	
-	//List<Activity> listaAttivita;
-	//List<Option> listaOpzioni;
+	//List<Activity> listaAttivitaTappa;
+	//List<Option> listaOpzioniTappa;
+	int timeOffset;
 	
 	
 	

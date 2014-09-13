@@ -8,46 +8,37 @@ public class CompositeTesting {
 		
 		
 		
-		StayTemplate st = new Transport("pulmann", "torino", "roma", "6 ore", "to-ro");
-		StayTemplate st1 = new Transport("pulmann", "torino", "milano", "4 ore", "to-mi");
-		StayTemplate st2 = new Transport("pulmann", "torino", "udine", "2 ore", "to-ud");
+		StayTemplate leaf1 = new Transport("pulmann", "torino", "roma", "6 ore", "to-ro");
+		StayTemplate leaf2 = new Transport("pulmann", "torino", "milano", "4 ore", "to-mi");
+		StayTemplate leaf3 = new Transport("pulmann", "torino", "udine", "2 ore", "to-ud");
+		StayTemplate leaf4 = new Accomodation("Hotel","Bello","5 stelle", "torino", "torino", "2 ore", "to-ud-Acc");
 		
-		StayTemplate st3 = new Accomodation("Hotel","Bello","5 stelle", "torino", "torino", "2 ore", "to-ud-Acc");
+		StayTemplate tappaComposita1 = new StayTemplateComposite("torino", "udine", "12", "to-ud");
+		StayTemplate tappaComposita2 = new StayTemplateComposite("torino", "udine", "12", "to-ud");
+	
+		//Creazione tappa composita 1
+		tappaComposita1.add(leaf1);
+		tappaComposita1.add(leaf2);
+		tappaComposita1.add(leaf3);
 		
-		StayTemplate ST = new StayTemplateComposite("torino", "udine", "12", "to-ud");
-		StayTemplate STAccomodation = new StayTemplateComposite("torino", "udine", "12", "to-ud");
-		
-		ST.add(st);
-		ST.add(st1);
-		ST.add(st2);
-		
-		STAccomodation.add(st3);
-		
-		//Itinerary it = new Itinerary(1,"parziale","turistico","torino","milano","12","ciao","null","");
-		
-		StayTemplate it = new Itinerary(1,"parziale","turistico","torino","milano","12","ciao","null","");
-		
-		/*
-		 * L'utente in seguito ad aver manifestato l'intenzione di aggiungere il template di tappa al proprio itinerario
-		 * gli verrà richiesto di configurare la tappa con attività e opzioni.
-		 * 
-		 * Una volta salvato il Template di tappa, questo verrà convertito in un oggetto di tipo Stay e aggiunto all'itinerario.
-		 */
-		
-		Stay tappaSalvata = new Stay(st);
-		it.add(tappaSalvata);
+		//Creazione tappa composita 2
+		tappaComposita2.add(leaf3);
+		tappaComposita2.add(leaf4);
 		
 		
-		it.add(ST);
+		//Creo un nuovo itinerario
+		Itinerary itinerario = new Itinerary(1,"parziale","turistico","torino","milano","12","ciao","null","");
 		
-		/*
-		 * Il database non permette questo assegnamento, come risolviamo???
-		 */
-		it.add(st3);
+		itinerario.add(tappaComposita1);
+		itinerario.add(leaf2);
+		itinerario.add(tappaComposita2);
+		itinerario.add(leaf4);
 		
 		
 		
-		System.out.println("La tappa composta è costituita dai seguenti elementi:\n"+it.toString());
+		
+		
+		//System.out.println("La tappa composta è costituita dai seguenti elementi:\n"+it.toString());
 		
 		
 		
