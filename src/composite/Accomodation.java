@@ -3,6 +3,8 @@
  */
 package composite;
 
+import java.util.List;
+
 /**
  * @author utente
  *
@@ -13,8 +15,9 @@ public class Accomodation extends StayTemplateLeaf {
 	String description;
 	String category;
 	
-	public Accomodation(String type, String description, String category, String startLoc, String endLoc, String durata, String nome) {
-		super(startLoc, endLoc, durata, nome, "Accomodation");
+	public Accomodation(String type, String description, String category, String startLoc, String endLoc, 
+						String durata, String nome, List<Option> optionValueList) {
+		super(startLoc, endLoc, durata, nome, "Accomodation", optionValueList);
 		this.type = type;
 		this.description = description;
 		this.category = category;

@@ -3,6 +3,8 @@
  */
 package composite;
 
+import java.util.List;
+
 /**
  * @author utente
  *
@@ -10,10 +12,12 @@ package composite;
 public class StayTemplateLeaf extends StayTemplate {
 	
 	String typeLeaf;
+	List<Option> optionValueList;
 	
-	public StayTemplateLeaf(String startLoc, String endLoc, String durata, String nome, String typeLeaf) {
+	public StayTemplateLeaf(String startLoc, String endLoc, String durata, String nome, String typeLeaf, List<Option> optionValueList) {
 		super(startLoc, endLoc, durata, nome);
 		this.typeLeaf = typeLeaf;
+		this.setOptionValueList(optionValueList);
 	}
 	
 	public String getTypeLeaf() {
@@ -22,6 +26,14 @@ public class StayTemplateLeaf extends StayTemplate {
 
 	public void add(StayTemplate st){}
 	
+	public List<Option> getOptionValueList() {
+		return optionValueList;
+	}
+
+	public void setOptionValueList(List<Option> optionValueList) {
+		this.optionValueList = optionValueList;
+	}
+
 	@Override
 	public String toString() {
 		return super.toString() +

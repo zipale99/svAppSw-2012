@@ -18,17 +18,17 @@ public class Option {
 	String name;
 	String desc;
 	String value;
-	private List<String> possibleValue;
+	private List<OptionValue> possibleValue;
 
 	public Option(int id, String name, String desc, String value) {
 		this.id = id;
 		this.name = name;
 		this.desc = desc;
 		this.value = value;
-		possibleValue = new ArrayList<String>();
+		possibleValue = new ArrayList<OptionValue>();
 	}
 	
-	public void add(String valore) {
+	public void add(OptionValue valore) {
         possibleValue.add(valore);
     }
 
@@ -64,7 +64,7 @@ public class Option {
 		this.value = value;
 	}
 
-	public List<String> getPossibleValue() {
+	public List<OptionValue> getPossibleValue() {
 		return possibleValue;
 	}
 		

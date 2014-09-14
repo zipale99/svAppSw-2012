@@ -97,7 +97,6 @@ public class DecoratorTest {
 		System.out.println("il mio nome è: " + nomeUtente +"\nla mia password è: "+password+"\nil mio ruolo è "+role);
 		
 		System.out.println("\nDecoro l'utente Reale con la funzionalità di creator");
-		utenteReale = new CreatorDecorator(utenteReale);
 		
 		//Recupero nuovamente il ruolo dell'utente
 		role = utenteReale.getRuolo();

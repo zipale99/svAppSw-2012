@@ -3,6 +3,8 @@
  */
 package composite;
 
+import java.util.List;
+
 /**
  * @author utente
  *
@@ -11,8 +13,8 @@ public class Transport extends StayTemplateLeaf {
 	
 	private String vehicle;
 	
-	public Transport(String vehicle, String startLoc, String endLoc, String durata, String nome) {
-		super(startLoc, endLoc, durata, nome, "Transport");
+	public Transport(String vehicle, String startLoc, String endLoc, String durata, String nome, List<Option> optionValueList) {
+		super(startLoc, endLoc, durata, nome, "Transport", optionValueList);
 		this.vehicle = vehicle;
 	}
 

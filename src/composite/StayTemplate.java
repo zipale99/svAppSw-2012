@@ -14,6 +14,8 @@ public abstract class StayTemplate {
 	String endLoc;
 	String durata;
 	String nome;
+	double price;
+	int timeOffset;
 	
 	/*
 	 * Costruttore di default, viene chiamato da StayTemplateComposite quando 

@@ -9,8 +9,12 @@ package composite;
  */
 public class HandMadeStay extends StayTemplateLeaf {
 	
+	/*
+	 * L'ultimo parametro del costruttore super() vuole una lista di option, 
+	 * essendo la tappa manuale priva di opzioni, imposto direttamente il parametro a null
+	 */
 	public HandMadeStay(String startLoc, String endLoc, String nome) {
-		super(startLoc, endLoc, null, nome, "HMS");
+		super(startLoc, endLoc, null, nome, "HMS", null);
 	}
 	
 }

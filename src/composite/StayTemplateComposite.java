@@ -1,6 +1,9 @@
 /**
  * Questa classe rappresenta il Composite, ossia l'aggregazione di oggetti di tipo StayTemplate.
  * Può contenere oggetti di tipo StayTemplateLeaf oppure altri oggetti composti di tipo StayTemplateComposite.
+ * 
+ * Poichè a priori, quando andiamo a recuperare i leaf di uno stay template, non sappiamo se saranno uno o più,
+ * trattiano ogni staytemplate come un composite. Nel caso di tappa singola, questo sarà composto da un solo leaf.
  */
 package composite;
 
@@ -17,11 +20,13 @@ import java.util.ArrayList;
 public class StayTemplateComposite extends StayTemplate {
 	
 	List<StayTemplate> tree;
+	List<Activity> activityList;
 	
 	
-	public StayTemplateComposite(String startLoc, String endLoc, String durata, String nome) {
+	public StayTemplateComposite(String startLoc, String endLoc, String durata, String nome, List<Activity> activityList) {
 		super(startLoc, endLoc, durata, nome);
 		tree = new ArrayList<StayTemplate>();
+		this.activityList = activityList;
 	}
 
 	public StayTemplateComposite() {
