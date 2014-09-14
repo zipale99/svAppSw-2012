@@ -76,6 +76,10 @@ public class ProxyUser extends AbstractUser {
 		 *impostati(parametro user passato come parametro)
 		 */
 	}
+
+	public User getUser() {
+		return user;
+	}
 	
 	
 }

@@ -11,6 +11,7 @@ import decorator.*;
  */
 public class DecoratorTest {
 
+
 	/**
 	 * @param args
 	 */
@@ -58,7 +59,7 @@ public class DecoratorTest {
 		
 		//System.out.println("Utilizzo il decorator per aggiungere la funzionalità di Creator ad Alessandro");
 		
-		//TO-DO...
+		
 		
 		/*
 		 * Una volta effettuato il login utilizzo un oggetto di tipo AbstractUserComponent che rappresenta un utente generico 
@@ -66,8 +67,10 @@ public class DecoratorTest {
 		 */
 		
 		//AbstractUserComponent utenteReale = new ProxyUser();
-		//AbstractUserComponent utenteReale = new User();
-		AbstractUserComponent utenteReale = utenteProxy;
+		//User utenteReale = new User();
+		User utenteReale = utenteProxy.getUser();
+		
+		
 		
 		//Decidere se fondere l'interfaccia AbstractUser con AbstractUserComponent
 		
@@ -98,17 +101,21 @@ public class DecoratorTest {
 		
 		System.out.println("\nDecoro l'utente Reale con la funzionalità di creator");
 		
+		DecoratorUser userDec = null;
+		userDec = DecoratorUser.decora(utenteReale);
+		System.out.println("\nDecoro nuovamente l'utente Reale con la funzionalità di creator");
+		userDec = DecoratorUser.decora(utenteReale);
+		userDec = DecoratorUser.decora(utenteReale);
+		userDec = DecoratorUser.decora(utenteReale);
+		userDec = DecoratorUser.decora(utenteReale);
+		userDec = DecoratorUser.decora(utenteReale);
+		
 		//Recupero nuovamente il ruolo dell'utente
-		role = utenteReale.getRuolo();
+		role = userDec.getRuolo();
 		System.out.println("\nQual'è il tuo ruolo adesso?");
 		System.out.println("\nil mio ruolo è "+role);
 		
 		/*
-		 * TO-DO_1: Implemetare il Multiton e il metodo create() per ciascun concretDecorator
-		 * per fare in modo che ciascun oggetto possa essere decorato al più una volta e con 
-		 * il tipo di decorator appropriato: Customer->CreatorCustomerDecorator
-		 * 									 TA->CreatorTaDecorator 
-		 * 
 		 * TO-DO_2: PATTERN GRASP CONTROLLER (managementController, searchController)
 		 */
 	}

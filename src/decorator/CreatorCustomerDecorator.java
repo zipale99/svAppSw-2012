@@ -1,8 +1,8 @@
 package decorator;
 
 public class CreatorCustomerDecorator extends DecoratorUser {
-
-	public CreatorCustomerDecorator(AbstractUserComponent user){
+	
+	public CreatorCustomerDecorator (User user){
 		super(user);
     }
 	
@@ -10,6 +10,7 @@ public class CreatorCustomerDecorator extends DecoratorUser {
 		//super.getRuolo(); per conoscere il ruolo di prima
 		return "CreatorCustomer";
 	}
+	
 	
 	/*
 	 * public String getRuolo() {

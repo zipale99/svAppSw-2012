@@ -2,8 +2,8 @@ package decorator;
 
 public class CreatorTADecorator extends DecoratorUser {
 
-	public CreatorTADecorator(AbstractUserComponent component) { //Decoro con la funzionalità di creator
-		super(component);
+	public CreatorTADecorator(User user) { //Decoro con la funzionalità di creator
+		super(user);
 	}
 	
 	public String getRuolo() {
