@@ -2,6 +2,9 @@ package testing;
 import java.util.ArrayList;
 import java.util.List;
 
+import resources.Activity;
+import resources.Option;
+import resources.OptionValue;
 import composite.*;
 
 public class CompositeTesting {

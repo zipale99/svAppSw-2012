@@ -1,7 +1,7 @@
 /**
  * Rappresenta la classe delle Attività.
  */
-package composite;
+package resources;
 
 /**
  * @author utente

@@ -3,7 +3,7 @@
  * OptionList contiene i valori possibili per le opzioni standard
  * OprionPers contiene il riferimento all'opzione standard e un riferimento alla personalizzazione scelta nella tabella optList
  */
-package composite;
+package resources;
 
 import java.util.ArrayList;
 import java.util.List;

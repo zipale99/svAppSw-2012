@@ -3,7 +3,7 @@
  * Questa classe è in relazione solo con la classe Option, in particolare un oggetto di tipo Option può contenere 
  * zero o più oggetti di tipo optionValue
  */
-package composite;
+package resources;
 
 /**
  * @author utente
