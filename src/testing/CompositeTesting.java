@@ -59,7 +59,6 @@ public class CompositeTesting {
 		opt4.add(new OptionValue("HOTEL", 300));
 		opt4.add(new OptionValue("BED & BREAKFAST", 170));
 		
-		/*** TO-DO: Creare una classe OptionValue per poter specificare i prezzi dei valori delle opzioni. ***/
 		
 		//Creo liste di opzioni da poter aggiungere ai Leaf
 		List<Option> listaOpt1 = new ArrayList<Option>();

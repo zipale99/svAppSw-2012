@@ -50,9 +50,7 @@ public class ProxyUser extends AbstractUser {
 	@Override
 	public void setUsername(String username) {
 		// TODO Auto-generated method stub
-		if (this.user == null)
-			System.out.println("Guarda che il riferimento al real object è NULL !!!!!");
-		else this.user.setUsername(username);
+		this.user.setUsername(username);
 	}
 	
 	@Override

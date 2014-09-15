@@ -62,7 +62,7 @@ public class DecoratorTest {
 		
 		
 		/*
-		 * Una volta effettuato il login utilizzo un oggetto di tipo AbstractUserComponent che rappresenta un utente generico 
+		 * Una volta effettuato il login utilizzo un oggetto di tipo User che rappresenta un utente generico 
 		 * per salvare le inforazioni precedentemente archiviate nel Proxy
 		 */
 		
