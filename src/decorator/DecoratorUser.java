@@ -2,7 +2,7 @@
  * Allo stesso modo del ConcretComponent, anche la classe DecoratorUser implementa l'interfaccia AbstracUser, ha il compito di decorare l'oggetto User
  * con i ConcreteDecorator(Creator)
  * 
- * Per l'implementazione del singleton, è stato utilizzato un metodo statico (create) che deve essere chiamato per restituire
+ * Per l'implementazione del singleton, è stato utilizzato un metodo statico (decora) che deve essere chiamato per restituire
  * l'istanza del decoratorUser. L'oggetto decoratorUser verrà istanziato solo la prima volta che il metodo è invocato.
  * Le volte successive sarà restituito un riferimento allo stesso oggetto.
  */
